@@ -60,7 +60,7 @@ export default function About() {
 
       {/* Timeline Section */}
       <section>
-        <h2 className="text-2xl font-semibold text-[#3B7B94] mb-6">Chris Darbyshire's career timeline</h2>
+        <h2 className="text-2xl font-semibold text-[#3B7B94] mb-6">Chris Darbyshire&apos;s career timeline</h2>
         <div className="space-y-8 max-w-3xl">
           <div className="flex items-start">
             <div className="w-4 h-4 bg-[#3B7B94] rounded-full mt-1 mr-4"></div>
