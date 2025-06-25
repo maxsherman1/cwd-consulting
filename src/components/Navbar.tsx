@@ -41,7 +41,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <img src="/cwd_logo.png" alt="CWD Consulting Logo" className="h-8 w-auto" />
+          <img src="/images/cwd_logo.png" alt="CWD Consulting Logo" className="h-8 w-auto" />
           <span className="text-xl font-bold text-[#3B7B94] font-sans">CWD Consulting</span>
         </Link>
         <div className="flex space-x-6">

@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <head>
-        <link rel="icon" href="/cwd_logo.png" type="image/png" />
+        <link rel="icon" href="/images/cwd_logo.png" type="image/png" />
       </head>
       <body className="flex flex-col min-h-screen" suppressHydrationWarning>
         <Navbar />
