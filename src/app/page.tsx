@@ -27,14 +27,17 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center">
       {/* Hero Section */}
-      <section className="text-center pt-24 pb-20 px-4 mt-16">
+      <section className="text-center pt-24 pb-20 px-4">
         <div className="container mx-auto bg-white rounded-lg shadow-md p-8">
           <h1 className="text-4xl md:text-5xl font-bold text-[#3B7B94] mb-6">
-            Empowering your business through expert consulting.
+            Filling resource gaps for start-ups, small and medium-sized investment management firms.
           </h1>
+          <p className="text-gray-600 mb-4">
+            Spearheaded by our Director Chris Darbyshire, backed by his expertise in the Finance and Investment worlds, we offer solutions for Investment Management firms that desire world class resources and knowledge to bolster performance and resolve organisational challenges.
+          </p>
           <Link
             href="/services"
-            className="inline-block bg-[#3B7B94] text-white px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition-opacity"
+            className="inline-block bg-[#3B7B94] text-white px-6 py-3 rounded-md font-medium hover:scale-105 transition-all duration-300"
           >
             Explore Our Services
           </Link>
