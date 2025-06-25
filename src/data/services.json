@@ -1,0 +1,150 @@
+{
+  "mainServices": [
+    {
+      "icon": "DollarSign",
+      "title": "Investment Services",
+      "description": "Strategic financial planning and investment management to maximize returns and mitigate risks.",
+      "link": "/services/investment"
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Product Governance",
+      "description": "Ensuring compliance and efficiency through robust product governance frameworks.",
+      "link": "/services/governance"
+    }
+  ],
+  "investmentServices": {
+    "Research": {
+      "icon": "Brain",
+      "services": [
+        {
+          "title": "Macro top-down briefing",
+          "frequency": "Weekly",
+          "details": "Presentation containing comments, charts and data covering the week's main economic, political and market events."
+        },
+        {
+          "title": "Thematic updates",
+          "frequency": "Weekly",
+          "details": "Focus on key themes affecting markets, e.g. AI, tariffs, Sovereign debt burdens."
+        },
+        {
+          "title": "Cross-asset market update",
+          "frequency": "Weekly",
+          "details": "Emphasis on asset classes used for asset allocation: goes beyond equities!"
+        },
+        {
+          "title": "Macro & cross-asset market update webinar",
+          "frequency": "Weekly",
+          "details": "All research services can be presented in real-time."
+        }
+      ]
+    },
+    "CustomResearch": {
+      "icon": "Target",
+      "services": [
+        {
+          "title": "Alternatives",
+          "frequency": "Adhoc",
+          "details": "Research, due diligence and advice on complex, derivative based or hedge fund strategies."
+        }
+      ]
+    },
+    "AssetAllocation": {
+      "icon": "Rocket",
+      "services": [
+        {
+          "title": "Tactical investment suggestions",
+          "frequency": "Weekly",
+          "details": "Investment ideas explained, from conception to execution."
+        },
+        {
+          "title": "Strategic Asset Allocation",
+          "frequency": "Annual",
+          "details": "High calibre strategic benchmark informed by external expertise."
+        }
+      ]
+    },
+    "ClientCommunications": {
+      "icon": "Shield",
+      "services": [
+        {
+          "title": "Client-friendly market commentary",
+          "frequency": "Weekly",
+          "details": "Non-technical review of key weekly economic, political and market events."
+        },
+        {
+          "title": "Client communications for valuations",
+          "frequency": "Quarterly",
+          "details": "\"Core\" message to clients which can be personalised by the IM."
+        },
+        {
+          "title": "Emergency client communications",
+          "frequency": "Adhoc",
+          "details": "Required in extreme market conditions."
+        }
+      ]
+    }
+  },
+  "governanceServices": {
+    "Governance": {
+      "icon": "Brain",
+      "services": [
+        {
+          "title": "Fractional CIO (joins investment committees)",
+          "frequency": "Quarterly",
+          "details": "Membership of, and participation in, client's investment committee."
+        },
+        {
+          "title": "Alpha Investment Committee membership",
+          "frequency": "Quarterly",
+          "details": "Manager can take part in Alpha Investment Committee, either actively or as an observer."
+        },
+        {
+          "title": "Investment process assessment",
+          "frequency": "Adhoc",
+          "details": "Deep-dive due diligence on investment process."
+        }
+      ]
+    },
+    "Product": {
+      "icon": "Target",
+      "services": [
+        {
+          "title": "Model Portfolio service (MPS)",
+          "frequency": "Continual",
+          "details": "Basic MPS service covering a range of risk-rated portfolios."
+        },
+        {
+          "title": "Higher-value model portfolio service (MPS+)",
+          "frequency": "Continual",
+          "details": "Higher value-added model portfolio service, using active managers, more dynamic asset allocation, more tactical."
+        }
+      ]
+    },
+    "AccessToExternalServices": {
+      "icon": "Rocket",
+      "services": [
+        {
+          "title": "Private Markets: access and advice",
+          "frequency": "Adhoc",
+          "details": "Access to leading providers of private market products."
+        },
+        {
+          "title": "Structured Products: access and advice",
+          "frequency": "Adhoc",
+          "details": "Access to banks manufacturing structured products and other intermediary services."
+        }
+      ]
+    },
+    "RiskManagement": {
+      "icon": "Shield",
+      "services": [
+        {
+          "title": "Portfolio risk monitoring",
+          "frequency": "Monthly",
+          "details": "Portfolio level risk, concentration risk, holdings versus model portfolio weights."
+        }
+      ]
+    }
+  }
+}
