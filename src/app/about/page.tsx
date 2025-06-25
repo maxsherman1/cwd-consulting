@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { Users } from 'lucide-react';
+// import { Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us | CWD Consulting',
