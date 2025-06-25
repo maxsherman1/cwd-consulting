@@ -38,7 +38,7 @@ export default function InvestmentServices() {
               <div className="mr-3">{getIconComponent(category.icon)}</div>
               <h2 className="text-2xl font-bold text-[#3B7B94]">{subheading.replace(/([A-Z])/g, ' $1')}</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
               {category.services.map((service, index) => (
                 <ServiceCard
                   key={index}

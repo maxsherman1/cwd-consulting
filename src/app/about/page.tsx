@@ -21,7 +21,7 @@ export default function About() {
         </p>
       </section>
 
-      {/* Team Section */}
+      {/* Team Section
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-[#3B7B94] mb-6">Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -56,7 +56,7 @@ export default function About() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Timeline Section */}
       <section>
