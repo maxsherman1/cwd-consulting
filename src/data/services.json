@@ -1,13 +1,13 @@
 {
   "mainServices": [
     {
-      "icon": "DollarSign",
+      "icon": "TrendingUp",
       "title": "Investment Services",
       "description": "Strategic financial planning and investment management to maximize returns and mitigate risks.",
       "link": "/services/investment"
     },
     {
-      "icon": "ShieldCheck",
+      "icon": "ClipboardCheck",
       "title": "Product Governance",
       "description": "Ensuring compliance and efficiency through robust product governance frameworks.",
       "link": "/services/governance"
@@ -15,7 +15,7 @@
   ],
   "investmentServices": {
     "Research": {
-      "icon": "Brain",
+      "icon": "Search",
       "services": [
         {
           "title": "Macro top-down briefing",
@@ -40,7 +40,7 @@
       ]
     },
     "CustomResearch": {
-      "icon": "Target",
+      "icon": "FileSearch",
       "services": [
         {
           "title": "Alternatives",
@@ -50,7 +50,7 @@
       ]
     },
     "AssetAllocation": {
-      "icon": "Rocket",
+      "icon": "BarChart3",
       "services": [
         {
           "title": "Tactical investment suggestions",
@@ -65,7 +65,7 @@
       ]
     },
     "ClientCommunications": {
-      "icon": "Shield",
+      "icon": "MessageSquareText",
       "services": [
         {
           "title": "Client-friendly market commentary",
@@ -87,7 +87,7 @@
   },
   "governanceServices": {
     "Governance": {
-      "icon": "Brain",
+      "icon": "Gavel",
       "services": [
         {
           "title": "Fractional CIO (joins investment committees)",
@@ -107,7 +107,7 @@
       ]
     },
     "Product": {
-      "icon": "Target",
+      "icon": "Package",
       "services": [
         {
           "title": "Model Portfolio service (MPS)",
@@ -122,7 +122,7 @@
       ]
     },
     "AccessToExternalServices": {
-      "icon": "Rocket",
+      "icon": "Network",
       "services": [
         {
           "title": "Private Markets: access and advice",
@@ -137,7 +137,7 @@
       ]
     },
     "RiskManagement": {
-      "icon": "Shield",
+      "icon": "ShieldAlert",
       "services": [
         {
           "title": "Portfolio risk monitoring",

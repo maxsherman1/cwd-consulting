@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { DollarSign, ShieldCheck } from 'lucide-react';
+import { TrendingUp, ClipboardCheck } from 'lucide-react';
 import servicesData from '../../data/services.json';
 import ServiceCard from '../../components/ServiceCard';
 
@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 export default function Services() {
   const services = servicesData.mainServices.map(service => ({
     ...service,
-    icon: service.icon === 'DollarSign' 
-      ? <DollarSign className="h-10 w-10 text-[#3B7B94]" /> 
-      : <ShieldCheck className="h-10 w-10 text-[#3B7B94]" />
+    icon: service.icon === 'TrendingUp' 
+      ? <TrendingUp className="h-10 w-10 text-[#3B7B94]" /> 
+      : <ClipboardCheck className="h-10 w-10 text-[#3B7B94]" />
   }));
 
   return (

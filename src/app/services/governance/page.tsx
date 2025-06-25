@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Brain, Target, Rocket, Shield } from 'lucide-react';
+import { Gavel, Package, Network, ShieldAlert } from 'lucide-react';
 import servicesData from '../../../data/services.json';
 import ServiceCard from '../../../components/ServiceCard';
 
@@ -10,16 +10,16 @@ export default function ProductGovernance() {
 
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
-      case 'Brain':
-        return <Brain className="h-10 w-10 text-[#3B7B94]" />;
-      case 'Target':
-        return <Target className="h-10 w-10 text-[#3B7B94]" />;
-      case 'Rocket':
-        return <Rocket className="h-10 w-10 text-[#3B7B94]" />;
-      case 'Shield':
-        return <Shield className="h-10 w-10 text-[#3B7B94]" />;
+      case 'Gavel':
+        return <Gavel className="h-10 w-10 text-[#3B7B94]" />;
+      case 'Package':
+        return <Package className="h-10 w-10 text-[#3B7B94]" />;
+      case 'Network':
+        return <Network className="h-10 w-10 text-[#3B7B94]" />;
+      case 'ShieldAlert':
+        return <ShieldAlert className="h-10 w-10 text-[#3B7B94]" />;
       default:
-        return <Brain className="h-10 w-10 text-[#3B7B94]" />;
+        return <Gavel className="h-10 w-10 text-[#3B7B94]" />;
     }
   };
 

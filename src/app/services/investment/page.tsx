@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Brain, Target, Rocket, Shield } from 'lucide-react';
+import { Search, FileSearch, BarChart3, MessageSquareText } from 'lucide-react';
 import servicesData from '../../../data/services.json';
 import ServiceCard from '../../../components/ServiceCard';
 
@@ -11,16 +11,16 @@ export default function InvestmentServices() {
 
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
-      case 'Brain':
-        return <Brain className="h-10 w-10 text-[#3B7B94]" />;
-      case 'Target':
-        return <Target className="h-10 w-10 text-[#3B7B94]" />;
-      case 'Rocket':
-        return <Rocket className="h-10 w-10 text-[#3B7B94]" />;
-      case 'Shield':
-        return <Shield className="h-10 w-10 text-[#3B7B94]" />;
+      case 'Search':
+        return <Search className="h-10 w-10 text-[#3B7B94]" />;
+      case 'FileSearch':
+        return <FileSearch className="h-10 w-10 text-[#3B7B94]" />;
+      case 'BarChart3':
+        return <BarChart3 className="h-10 w-10 text-[#3B7B94]" />;
+      case 'MessageSquareText':
+        return <MessageSquareText className="h-10 w-10 text-[#3B7B94]" />;
       default:
-        return <Brain className="h-10 w-10 text-[#3B7B94]" />;
+        return <Search className="h-10 w-10 text-[#3B7B94]" />;
     }
   };
 
