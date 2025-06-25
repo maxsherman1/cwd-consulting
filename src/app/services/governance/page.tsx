@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Brain, Target, Rocket, Shield, ChevronDown, ChevronUp } from 'lucide-react';
+import { Brain, Target, Rocket, Shield } from 'lucide-react';
 import servicesData from '../../../data/services.json';
+import ServiceCard from '../../../components/ServiceCard';
 
 export default function ProductGovernance() {
   const [expandedService, setExpandedService] = useState<{ subheading: string, index: number } | null>(null);
@@ -38,23 +39,15 @@ export default function ProductGovernance() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
               {category.services.map((service, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:bg-[#3B7B94]/5 transition-all duration-300 cursor-pointer flex flex-col"
-                  onClick={() => toggleExpand(subheading, index)}
-                >
-                  <h3 className="text-xl font-semibold text-[#3B7B94] mb-2">{service.title}</h3>
-                  <p className="text-gray-600"><strong>Frequency:</strong> {service.frequency}</p>
-                  {expandedService && expandedService.subheading === subheading && expandedService.index === index && (
-                    <div className="mt-2 mb-2 text-gray-700">{service.details}</div>
-                  )}
-                  <div className="flex justify-center mt-auto pt-2">
-                    {expandedService && expandedService.subheading === subheading && expandedService.index === index ? 
-                      <ChevronUp className="h-5 w-5 text-[#3B7B94]" /> : 
-                      <ChevronDown className="h-5 w-5 text-[#3B7B94]" />
-                    }
-                  </div>
-                </div>
+                <ServiceCard
+                  key={index}
+                  variant="detailed"
+                  title={service.title}
+                  frequency={service.frequency}
+                  details={service.details}
+                  isExpanded={!!(expandedService && expandedService.subheading === subheading && expandedService.index === index)}
+                  onToggle={() => toggleExpand(subheading, index)}
+                />
               ))}
             </div>
           </div>
