@@ -31,7 +31,7 @@ export default function Research() {
       </h1>
       <div className="grid grid-cols-1 gap-6">
         <div className="flex flex-col md:flex-row gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow h-auto md:h-96 overflow-auto flex-1">
+          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow h-auto md:h-96 overflow-auto flex-1 order-2 md:order-1">
             <FileText className="h-10 w-10 text-[var(--primary-teal)] mb-4" />
             <h2 className="text-xl font-semibold text-[var(--primary-teal)] mb-2">
               {papers[0].title}
@@ -44,7 +44,7 @@ export default function Research() {
               Download PDF
             </a>
           </div>
-          <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200 h-auto md:h-96 flex justify-center items-center w-auto">
+          <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200 h-auto md:h-96 flex justify-center items-center w-auto order-1 md:order-2">
             <img
               src="/images/spectator_events.jpg"
               alt="Spectator Event 1"
@@ -52,8 +52,8 @@ export default function Research() {
             />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-6">
-          <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200 h-auto md:h-96 flex justify-center items-center w-auto">
+        <div className="flex flex-col lg:flex-row gap-6">
+          <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200 h-auto lg:h-96 flex justify-center items-center w-auto">
             <img
               src="/images/spectator_events_2.jpg"
               alt="Spectator Event 2"
