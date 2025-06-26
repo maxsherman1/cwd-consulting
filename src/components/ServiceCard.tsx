@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 interface ServiceCardProps {
   variant: "simple" | "detailed";
@@ -67,16 +67,22 @@ export default function ServiceCard({
           <strong>Frequency:</strong> {frequency}
         </p>
       )}
-      {details && expanded && (
-        <div className="mt-2 mb-0 text-gray-700">{details}</div>
+      {details && (
+        <div
+          className={`mt-2 mb-0 text-gray-700 overflow-hidden transition-all duration-300 ease-in-out ${
+            expanded ? "max-h-[60px]" : "max-h-0"
+          }`}
+        >
+          {details}
+        </div>
       )}
       {details && (
         <div className="flex justify-center mt-auto pt-2">
-          {expanded ? (
-            <ChevronUp className="h-5 w-5 text-[var(--primary-teal)]" />
-          ) : (
-            <ChevronDown className="h-5 w-5 text-[var(--primary-teal)]" />
-          )}
+          <ChevronDown
+            className={`h-5 w-5 text-[var(--primary-teal)] transform ${
+              expanded ? "rotate-180" : ""
+            } transition-transform duration-300`}
+          />
         </div>
       )}
     </div>
