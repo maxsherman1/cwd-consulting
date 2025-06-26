@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useState } from "react";
+import Link from "next/link";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface ServiceCardProps {
-  variant: 'simple' | 'detailed';
+  variant: "simple" | "detailed";
   icon?: React.ReactNode;
   title: string;
   description?: string;
@@ -25,7 +25,7 @@ export default function ServiceCard({
   details,
   link,
   isExpanded = false,
-  onToggle
+  onToggle,
 }: ServiceCardProps) {
   const [internalExpanded, setInternalExpanded] = useState(isExpanded);
 
@@ -39,41 +39,43 @@ export default function ServiceCard({
 
   const expanded = onToggle ? isExpanded : internalExpanded;
 
-  if (variant === 'simple') {
+  if (variant === "simple") {
     const cardContent = (
-      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-103 hover:bg-[#3B7B94]/5 transition-all duration-400 cursor-pointer">
+      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-103 hover:bg-[var(--primary-teal)]/5 transition-all duration-400 cursor-pointer">
         {icon && <div className="mb-4">{icon}</div>}
-        <h2 className="text-xl font-semibold text-[#3B7B94] mb-2">{title}</h2>
+        <h2 className="text-xl font-semibold text-[var(--primary-teal)] mb-2">
+          {title}
+        </h2>
         {description && <p className="text-gray-600">{description}</p>}
       </div>
     );
 
-    return link ? (
-      <Link href={link}>
-        {cardContent}
-      </Link>
-    ) : (
-      cardContent
-    );
+    return link ? <Link href={link}>{cardContent}</Link> : cardContent;
   }
 
   // Detailed variant
   return (
     <div
-      className="bg-white p-6 pb-4 rounded-lg shadow-md hover:shadow-lg hover:bg-[#3B7B94]/5 transition-all duration-400 cursor-pointer flex flex-col"
+      className="bg-white p-6 pb-4 rounded-lg shadow-md hover:shadow-lg hover:bg-[var(--primary-teal)]/5 transition-all duration-400 cursor-pointer flex flex-col"
       onClick={handleToggle}
     >
-      <h3 className="text-xl font-semibold text-[#3B7B94] mb-2">{title}</h3>
-      {frequency && <p className="text-gray-600"><strong>Frequency:</strong> {frequency}</p>}
+      <h3 className="text-xl font-semibold text-[var(--primary-teal)] mb-2">
+        {title}
+      </h3>
+      {frequency && (
+        <p className="text-gray-600">
+          <strong>Frequency:</strong> {frequency}
+        </p>
+      )}
       {details && expanded && (
         <div className="mt-2 mb-0 text-gray-700">{details}</div>
       )}
       {details && (
         <div className="flex justify-center mt-auto pt-2">
           {expanded ? (
-            <ChevronUp className="h-5 w-5 text-[#3B7B94]" />
+            <ChevronUp className="h-5 w-5 text-[var(--primary-teal)]" />
           ) : (
-            <ChevronDown className="h-5 w-5 text-[#3B7B94]" />
+            <ChevronDown className="h-5 w-5 text-[var(--primary-teal)]" />
           )}
         </div>
       )}
