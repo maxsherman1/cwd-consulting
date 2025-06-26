@@ -6,6 +6,22 @@ export const metadata: Metadata = {
   title: "Research & Insights | CWD Consulting",
   description:
     "Access our latest research papers and whitepapers on business strategy and innovation.",
+  openGraph: {
+    title: "Research & Insights | CWD Consulting",
+    description: "Access our latest research papers and whitepapers on business strategy and innovation.",
+    url: "https://cwdconsulting.co.uk/research",
+    siteName: "CWD Consulting",
+    images: [
+      {
+        url: "/images/cwd_logo.png",
+        width: 1200,
+        height: 630,
+        alt: "CWD Consulting Logo",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
 };
 
 export default function Research() {

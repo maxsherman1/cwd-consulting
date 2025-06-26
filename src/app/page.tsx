@@ -12,10 +12,10 @@ export const metadata: Metadata = {
     siteName: "CWD Consulting",
     images: [
       {
-        url: "/og-image.jpg", // Placeholder for og:image
+        url: "/images/cwd_logo.png",
         width: 1200,
         height: 630,
-        alt: "CWD Consulting",
+        alt: "CWD Consulting Logo",
       },
     ],
     locale: "en_GB",

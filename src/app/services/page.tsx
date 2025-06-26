@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   title: "Services | CWD Consulting",
   description:
     "Discover the range of expert consulting services we offer to empower your business.",
+  openGraph: {
+    title: "Services | CWD Consulting",
+    description: "Discover the range of expert consulting services we offer to empower your business.",
+    url: "https://cwdconsulting.co.uk/services",
+    siteName: "CWD Consulting",
+    images: [
+      {
+        url: "/images/cwd_logo.png",
+        width: 1200,
+        height: 630,
+        alt: "CWD Consulting Logo",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
 };
 
 export default function Services() {

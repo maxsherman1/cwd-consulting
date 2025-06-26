@@ -6,6 +6,22 @@ export const metadata: Metadata = {
   title: "About Us | CWD Consulting",
   description:
     "Learn more about CWD Consulting, our mission, and our dedicated team.",
+  openGraph: {
+    title: "About Us | CWD Consulting",
+    description: "Learn more about CWD Consulting.",
+    url: "https://cwdconsulting.co.uk/about",
+    siteName: "CWD Consulting",
+    images: [
+      {
+        url: "/images/cwd_logo.png",
+        width: 1200,
+        height: 630,
+        alt: "CWD Consulting Logo",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
 };
 
 export default function About() {
