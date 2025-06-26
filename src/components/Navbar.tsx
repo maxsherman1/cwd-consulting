@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
@@ -50,7 +52,7 @@ const Navbar = () => {
             CWD Consulting
           </span>
         </Link>
-        <div className="flex space-x-6">
+        <div className="hidden md:flex space-x-6">
           {navLinks.map((link) => {
             if (link.label === "Services") {
               return (
@@ -62,11 +64,11 @@ const Navbar = () => {
                 >
                   <Link
                     href={link.href}
-                    className={`text-sm font-medium ${
-                      pathname === link.href
-                        ? "text-[var(--primary-teal)]"
-                        : "text-gray-600 hover:text-[var(--primary-teal)]"
-                    } transition-colors`}
+                    className={`text-sm font-medium relative ${
+                      pathname === link.href || isServicesOpen
+                        ? "text-[var(--primary-teal)] after:w-full after:left-0"
+                        : "text-gray-600 hover:text-[var(--primary-teal)] after:w-0 after:left-0 hover:after:w-full"
+                    } transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:h-[2px] after:bg-[var(--primary-teal)] after:transition-all after:duration-300`}
                   >
                     {link.label}
                   </Link>
@@ -94,18 +96,124 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium ${
+                className={`text-sm font-medium relative ${
                   pathname === link.href
-                    ? "text-[var(--primary-teal)]"
-                    : "text-gray-600 hover:text-[var(--primary-teal)]"
-                } transition-colors`}
+                    ? "text-[var(--primary-teal)] after:w-full after:left-0"
+                    : "text-gray-600 hover:text-[var(--primary-teal)] after:w-0 after:left-0 hover:after:w-full"
+                } transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:h-[2px] after:bg-[var(--primary-teal)] after:transition-all after:duration-300`}
               >
                 {link.label}
               </Link>
             );
           })}
         </div>
+        <button
+          className="md:hidden text-gray-600 hover:text-[var(--primary-teal)] focus:outline-none"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <svg
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            {isMobileMenuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
       </div>
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white shadow-lg absolute top-[60px] left-0 right-0 z-10 transition-all duration-300 ease-in-out">
+          <div className="flex flex-col px-6 py-4 space-y-4">
+            {navLinks.map((link) => {
+            if (link.label === "Services") {
+              return (
+                <div key={link.href} className="flex flex-col">
+                  <div className="flex items-center cursor-pointer">
+                    <span 
+                      className={`text-sm font-medium py-1 relative flex-1 ${
+                        pathname === link.href || isMobileServicesOpen
+                          ? "text-[var(--primary-teal)] after:w-full after:left-0"
+                          : "text-gray-600 hover:text-[var(--primary-teal)] after:w-0 after:left-0 hover:after:w-full"
+                      } transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-[var(--primary-teal)] after:transition-all after:duration-300`}
+                      style={{ display: 'inline-block', position: 'relative' }}
+                      onClick={() => {
+                        if (isMobileServicesOpen) {
+                          window.location.href = link.href;
+                          setIsMobileMenuOpen(false);
+                        } else {
+                          setIsMobileServicesOpen(true);
+                        }
+                      }}
+                    >
+                      {link.label}
+                    </span>
+                    <span 
+                      className="ml-2 inline-block cursor-pointer"
+                      onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                    >
+                      <svg 
+                        className={`h-4 w-4 transform ${isMobileServicesOpen ? 'rotate-180' : ''} transition-transform duration-200`}
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </div>
+                  {isMobileServicesOpen && (
+                    <div className="pl-4 mt-2 space-y-2 transition-all duration-300 ease-in-out flex flex-col">
+                      {servicesDropdown.map((dropdownLink) => (
+                        <Link
+                          key={dropdownLink.href}
+                          href={dropdownLink.href}
+                          className={`text-sm font-medium py-1 relative ${
+                            pathname === dropdownLink.href
+                              ? "text-[var(--primary-teal)] after:w-full after:left-0"
+                              : "text-gray-600 hover:text-[var(--primary-teal)] after:w-0 after:left-0 hover:after:w-full"
+                          } transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-[var(--primary-teal)] after:transition-all after:duration-300`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {dropdownLink.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium py-1 relative ${
+                    pathname === link.href
+                      ? "text-[var(--primary-teal)] after:w-full after:left-0"
+                      : "text-gray-600 hover:text-[var(--primary-teal)] after:w-0 after:left-0 hover:after:w-full"
+                  } transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-[var(--primary-teal)] after:transition-all after:duration-300`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
