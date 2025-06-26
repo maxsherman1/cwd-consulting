@@ -25,32 +25,48 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center p-8">
       {/* Hero Section */}
-      <section className="text-center pt-24 pb-20 px-4">
-        <div className="container mx-auto bg-white rounded-lg shadow-md p-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-[var(--primary-teal)] mb-6">
-            Filling resource gaps for start-ups, small, and medium-sized
-            investment management firms.
-          </h1>
-          <p className="text-gray-600 mb-4">
-            Spearheaded by our Director Chris Darbyshire, backed by his
-            expertise in the Finance and Investment worlds, we offer solutions
-            for Investment Management firms that desire world class resources
-            and knowledge to bolster performance and resolve organisational
-            challenges.
-          </p>
-          <Link
-            href="/services"
-            className="inline-block bg-[var(--primary-teal)] text-white px-6 py-3 rounded-md font-medium hover:scale-105 transition-all duration-300"
-          >
-            Explore Our Services
-          </Link>
+      <section className="container mx-auto bg-white rounded-lg shadow-md p-8 text-center pb-6">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8 text-center">
+          CWD Consulting
+        </h1>
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="md:w-1/3 mb-6 md:mb-0 md:pr-6 order-1 md:order-1">
+            <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200" style={{ width: '100%', height: '300px', aspectRatio: '1 / 1' }}>
+              <img 
+                src="/images/profile_pic_2.jpg" 
+                alt="Chris Darbyshire, Director" 
+                className="absolute inset-0 object-cover object-center" 
+                style={{ objectPosition: 'center', width: '100%', height: '100%' }} 
+              />
+            </div>
+            <p className="text-center text-sm text-gray-600 mt-2">Chris Darbyshire, Director</p>
+          </div>
+          <div className="md:w-2/3 order-2 md:order-2">
+            <h1 className="text-3xl md:text-4xl font-bold text-[var(--primary-teal)] mb-6">
+              Filling resource gaps for start-ups, small, and medium-sized
+              investment management firms.
+            </h1>
+            <p className="text-gray-600 mb-4">
+              Spearheaded by our Director Chris Darbyshire, backed by his
+              expertise in the Finance and Investment worlds, we offer solutions
+              for Investment Management firms that desire world class resources
+              and knowledge to bolster performance and resolve organisational
+              challenges.
+            </p>
+            <Link
+              href="/services"
+              className="inline-block bg-[var(--primary-teal)] text-white px-6 py-3 rounded-md font-medium hover:scale-105 transition-all duration-300"
+            >
+              Explore Our Services
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Intro Section with Key Pillars */}
-      <section className="py-16 px-4">
+      <section className="py-6 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-8">
             Our Approach
