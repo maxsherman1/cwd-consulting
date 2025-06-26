@@ -68,7 +68,7 @@ export default function About() {
       {/* Timeline Section */}
       <section>
         <h2 className="text-2xl font-semibold text-[var(--primary-teal)] mb-6">
-          Chris Darbyshire's career timeline
+          Chris Darbyshire&apos;s career timeline
         </h2>
         <div className="space-y-8 max-w-3xl">
           <div className="flex items-start">
