@@ -67,94 +67,111 @@ export default function About() {
 
       {/* Timeline Section */}
       <section>
-        <h2 className="text-2xl font-semibold text-[var(--primary-teal)] mb-6">
-          Chris Darbyshire&apos;s career timeline
-        </h2>
-        <div className="space-y-8 max-w-3xl">
-          <div className="flex items-start">
-            <div className="w-4 h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4"></div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800">
-                2019 - Present
-              </h3>
-              <p className="text-gray-600">
-                Chief investment officer, Walker Crips
-              </p>
+        <div className="flex flex-col lg:flex-row gap-6">
+          <div className="lg:w-1/2 order-2 lg:order-1">
+            <h2 className="text-2xl font-semibold text-[var(--primary-teal)] mb-6">
+              Chris Darbyshire&apos;s career timeline
+            </h2>
+            <div className="space-y-8 max-w-3xl">
+              <div className="flex items-start">
+                <div className="w-4 h-4 min-w-4 min-h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    2019 - Present
+                  </h3>
+                  <p className="text-gray-600">
+                    Chief investment officer, Walker Crips
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-4 h-4 min-w-4 min-h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    2012 - 2019
+                  </h3>
+                  <p className="text-gray-600">Chief investment officer, 7IM</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-4 h-4 min-w-4 min-h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    2007 - 2012
+                  </h3>
+                  <p className="text-gray-600">
+                    Vice-president: fixed income, currencies and commodities,
+                    Goldman Sachs{" "}
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-4 h-4 min-w-4 min-h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    2004 - 2007
+                  </h3>
+                  <p className="text-gray-600">
+                    Manager: portfolio solutions, BNP Paribas{" "}
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-4 h-4 min-w-4 min-h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    2001 - 2004
+                  </h3>
+                  <p className="text-gray-600">
+                    Equity research analyst, BNP Paribas
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-4 h-4 min-w-4 min-h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    1994 - 1999
+                  </h3>
+                  <p className="text-gray-600">
+                    Chief financial officer, Transportation Displays
+                    Incorporated
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-4 h-4 min-w-4 min-h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    1991 - 1994
+                  </h3>
+                  <p className="text-gray-600">
+                    Equity research analyst, Hambros Bank
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-4 h-4 min-w-4 min-h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    1990 - 1991
+                  </h3>
+                  <p className="text-gray-600">
+                    Journalist, Euromoney Publications plc
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="flex items-start">
-            <div className="w-4 h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4"></div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800">
-                2012 - 2019
-              </h3>
-              <p className="text-gray-600">Chief investment officer, 7IM</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="w-4 h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4"></div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800">
-                2007 - 2012
-              </h3>
-              <p className="text-gray-600">
-                Vice-president: fixed income, currencies and commodities,
-                Goldman Sachs{" "}
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="w-4 h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4"></div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800">
-                2004 - 2007
-              </h3>
-              <p className="text-gray-600">
-                Manager: portfolio solutions, BNP Paribas{" "}
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="w-4 h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4"></div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800">
-                2001 - 2004
-              </h3>
-              <p className="text-gray-600">
-                Equity research analyst, BNP Paribas
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="w-4 h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4"></div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800">
-                1994 - 1999
-              </h3>
-              <p className="text-gray-600">
-                Chief financial officer, Transportation Displays Incorporated
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="w-4 h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4"></div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800">
-                1991 - 1994
-              </h3>
-              <p className="text-gray-600">
-                Equity research analyst, Hambros Bank
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="w-4 h-4 bg-[var(--primary-teal)] rounded-full mt-1 mr-4"></div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800">
-                1990 - 1991
-              </h3>
-              <p className="text-gray-600">
-                Journalist, Euromoney Publications plc
+          <div className="lg:w-1/2 flex justify-center order-1 lg:order-2">
+            <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200 w-full max-h-128 flex flex-col items-center">
+              <img
+                src="/images/headshot.jpg"
+                alt="Chris Darbyshire"
+                className="object-cover object-center w-auto h-full mx-auto"
+              />
+              <p className="text-center text-ms text-gray-600 mt-2">
+                Chris Darbyshire
               </p>
             </div>
           </div>
