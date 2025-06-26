@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 
@@ -28,6 +28,19 @@ export default function ServiceCard({
   onToggle,
 }: ServiceCardProps) {
   const [internalExpanded, setInternalExpanded] = useState(isExpanded);
+  const [contentHeight, setContentHeight] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const expanded = onToggle ? isExpanded : internalExpanded;
+
+  useEffect(() => {
+    if (contentRef.current) {
+      if (expanded) {
+        setContentHeight(contentRef.current.scrollHeight);
+      } else {
+        setContentHeight(0);
+      }
+    }
+  }, [expanded]);
 
   const handleToggle = () => {
     const newExpandedState = !internalExpanded;
@@ -36,8 +49,6 @@ export default function ServiceCard({
       onToggle(newExpandedState);
     }
   };
-
-  const expanded = onToggle ? isExpanded : internalExpanded;
 
   if (variant === "simple") {
     const cardContent = (
@@ -69,9 +80,9 @@ export default function ServiceCard({
       )}
       {details && (
         <div
-          className={`mt-2 mb-0 text-gray-700 overflow-hidden transition-all duration-300 ease-in-out ${
-            expanded ? "max-h-[60px]" : "max-h-0"
-          }`}
+          ref={contentRef}
+          className={`mt-2 mb-0 text-gray-700 overflow-hidden transition-all duration-300 ease-in-out`}
+          style={{ maxHeight: expanded ? `${contentHeight}px` : '0px' }}
         >
           {details}
         </div>
