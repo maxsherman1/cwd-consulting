@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Home | CWD Consulting",
@@ -34,9 +35,11 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/3 mb-6 md:mb-0 md:pr-6 order-1 md:order-1">
             <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200" style={{ width: '100%', height: '300px', aspectRatio: '1 / 1' }}>
-              <img 
+              <Image 
                 src="/images/profile_pic_2.jpg" 
-                alt="Chris Darbyshire, Director" 
+                alt="Chris Darbyshire, Director"
+                width={520}
+                height={260} 
                 className="absolute inset-0 object-cover object-center" 
                 style={{ objectPosition: 'center', width: '100%', height: '100%' }} 
               />

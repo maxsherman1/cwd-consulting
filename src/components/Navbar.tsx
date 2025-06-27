@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -44,9 +45,11 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <img
+          <Image
             src="/images/cwd_logo.png"
             alt="CWD Consulting Logo"
+            width={262}
+            height={158}
             className="h-8 w-auto"
           />
           <span className="text-xl font-bold text-[var(--primary-teal)] font-sans">

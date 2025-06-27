@@ -1,6 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import { FileText } from "lucide-react";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Research & Insights | CWD Consulting",
@@ -61,18 +62,22 @@ export default function Research() {
             </a>
           </div>
           <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200 h-auto md:h-96 flex justify-center items-center w-auto order-1 md:order-2">
-            <img
+            <Image
               src="/images/spectator_events.jpg"
               alt="Spectator Event 1"
+              width={683}
+              height={728} 
               className="object-contain object-top w-auto h-full max-w-full"
             />
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200 h-auto lg:h-96 flex justify-center items-center w-auto">
-            <img
+            <Image
               src="/images/spectator_events_2.jpg"
               alt="Spectator Event 2"
+              width={1024}
+              height={683} 
               className="object-contain object-center w-auto h-full max-w-full"
             />
           </div>

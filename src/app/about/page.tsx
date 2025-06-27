@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import Image from "next/image";
 // import { Users } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -181,9 +182,11 @@ export default function About() {
           </div>
           <div className="lg:w-1/2 flex justify-center order-1 lg:order-2">
             <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200 w-full max-h-128 flex flex-col items-center">
-              <img
+              <Image
                 src="/images/headshot.jpg"
                 alt="Chris Darbyshire"
+                width={800}
+                height={475}
                 className="object-cover object-center w-auto h-full mx-auto"
               />
               <p className="text-center text-ms text-gray-600 mt-2">
